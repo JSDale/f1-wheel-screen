@@ -27,7 +27,7 @@ void DisplayRandomNumbers(void)
 
 	POINT xStart = 250;
     POINT yStart = 50;
-    char numbers[] = {(char)number};
+    char numbers[] = "wibble";
     GUI_DisString_EN(xStart, yStart, numbers, &Font24, BLACK, WHITE);
 }
 
