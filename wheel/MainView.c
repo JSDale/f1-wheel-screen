@@ -13,7 +13,7 @@ uint8_t numbers[] = {0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38};
 
 uint8_t GetNumber(void)
 {
-	if (iterationCount == 7)
+	if (iterationCount > 7)
 	{
 		iterationCount = 0;
 	}
@@ -25,6 +25,7 @@ uint8_t GetNumber(void)
 
 void DisplayRandomNumbers(void)
 {
+    GUI_Clear(BLACK);
 	uint8_t number = GetNumber();
 
 	POINT xStart = 250;
@@ -50,7 +51,7 @@ int Start(void)
 	while(1)
 	{
 		DisplayRandomNumbers();
-		Driver_Delay_ms(1000);
+		Driver_Delay_ms(750);
 	}
 
 	return 0;
