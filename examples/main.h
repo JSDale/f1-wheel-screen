@@ -35,4 +35,6 @@
 
 int lcd_test(void);
 
+int Start(void);
+
 #endif
