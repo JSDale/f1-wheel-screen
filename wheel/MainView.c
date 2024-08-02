@@ -18,7 +18,9 @@ uint8_t GetNumber(void)
 		iterationCount = 0;
 	}
 
-	return numbers[iterationCount];
+	uint8_t numberToReturn = numbers[iterationCount];
+	iterationCount++;
+	return numberToReturn;
 }
 
 void DisplayRandomNumbers(void)
@@ -27,7 +29,8 @@ void DisplayRandomNumbers(void)
 
 	POINT xStart = 250;
     POINT yStart = 50;
-    char numbers[1] = {(char)number};
+	char wibble = (char)number;
+    char numbers[] = {wibble};
     GUI_DisString_EN(xStart, yStart, numbers, &Font24, BLACK, WHITE);
 }
 
