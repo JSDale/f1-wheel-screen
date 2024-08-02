@@ -7,11 +7,34 @@
 #include <stdio.h>
 #include "hardware/watchdog.h"
 #include "pico/stdlib.h"
+#include <stdint.h>
+#include <stdio.h>
+
+uint8_t iterationCount = 0;
+uint8_t numbers[] = {1,2,3,4,5,6,7,8};
+
+void DisplayRandomNumbers(void)
+{
+	uint8_t number = GetNumber();
+
+	POINT xStart = 250;
+    POINT yStart = 50;
+    char content[] = (char)number;
+    GUI_DisString_EN(xStart, yStart, content, &Font24, BLACK, WHITE);
+}
+
+uint8_t GetNumber(void)
+{
+	if (iterationCount == 7)
+	{
+		iterationCount = 0;
+	}
+
+	return numbers[iterationCount];
+}
 
 int Start(void)
 {
-    uint8_t counter = 0;
-   	
 	System_Init();
 	LCD_SCAN_DIR  lcd_scan_dir = SCAN_DIR_DFT;
 	LCD_Init(lcd_scan_dir,800);
@@ -23,5 +46,12 @@ int Start(void)
     char content[] = "hello world";
     GUI_DisString_EN(xStart, yStart, content, &Font12, BLACK, BLUE);
 
+	while(1)
+	{
+		DisplayRandomNumbers();
+		Driver_Delay_ms(1000);
+	}
+
 	return 0;
 }
+
