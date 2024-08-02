@@ -31,7 +31,7 @@
 #define __MAIN_H
 
 #include "DEV_Config.h"
-#include "/wheel/MainView.h"
+#include "MainView.h"
 #include <pico/stdlib.h> // malloc() free()
 
 int lcd_test(void);
