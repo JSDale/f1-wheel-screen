@@ -1,5 +1,4 @@
 #include "MainView.h"
-#include "main.h"
 #include "LCD_Driver.h"
 #include "LCD_Touch.h"
 #include "LCD_GUI.h"
