@@ -11,6 +11,9 @@
 uint8_t iterationCount = 0;
 uint8_t numbers[] = {0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38};
 
+const uint16_t MaxWidth = 480;
+const uint16_t MaxHeight = 320;
+
 uint8_t GetNumber(void)
 {
 	if (iterationCount > 7)
@@ -27,8 +30,8 @@ void DisplayRandomNumbers(void)
 {
 	uint8_t number = GetNumber();
 
-	POINT xStart = 250;
-    POINT yStart = 50;
+	POINT xStart = MaxHeight / 2;
+    POINT yStart = MaxWidth / 2;
 	char wibble = (char)number;
     char numbers[] = {wibble, '\0'};
     GUI_DisString_EN(xStart, yStart, numbers, &Font24, BLACK, WHITE);
