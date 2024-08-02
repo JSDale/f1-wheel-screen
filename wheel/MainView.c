@@ -16,12 +16,12 @@ int Start(void)
 	LCD_SCAN_DIR  lcd_scan_dir = SCAN_DIR_DFT;
 	LCD_Init(lcd_scan_dir,800);
 
-	GUI_Clear();
+	GUI_Clear(BLACK);
 	Driver_Delay_ms(200);
     POINT xStart = 25;
     POINT yStart = 50;
     char content[] = "hello world";
-    GUI_DisString_EN(xStart, yStart, content, &Font12, WHITE, BLUE);
+    GUI_DisString_EN(xStart, yStart, content, &Font12, BLACK, BLUE);
 
 	return 0;
 }
