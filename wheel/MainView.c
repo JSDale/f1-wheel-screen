@@ -25,7 +25,6 @@ uint8_t GetNumber(void)
 
 void DisplayRandomNumbers(void)
 {
-    GUI_Clear(BLACK);
 	uint8_t number = GetNumber();
 
 	POINT xStart = 250;
