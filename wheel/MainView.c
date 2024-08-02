@@ -30,7 +30,7 @@ void DisplayRandomNumbers(void)
 	POINT xStart = 250;
     POINT yStart = 50;
 	char wibble = (char)number;
-    char numbers[] = {wibble};
+    char numbers[] = {wibble, '\0'};
     GUI_DisString_EN(xStart, yStart, numbers, &Font24, BLACK, WHITE);
 }
 
@@ -45,7 +45,7 @@ int Start(void)
     POINT xStart = 25;
     POINT yStart = 50;
     char content[] = "hello world";
-    //GUI_DisString_EN(xStart, yStart, content, &Font12, BLACK, BLUE);
+    GUI_DisString_EN(xStart, yStart, content, &Font12, BLACK, BLUE);
 
 	while(1)
 	{
