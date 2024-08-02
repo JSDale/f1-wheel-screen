@@ -305,7 +305,8 @@ void GUI_DisString_EN(POINT Xstart, POINT Ystart, const char * pString,
         return;
     }
 
-    while(* pString != '\0') {
+    while(* pString != '\0') 
+    {
         //if X direction filled , reposition to(Xstart,Ypoint),Ypoint is Y direction plus the height of the character
         if((Xpoint + Font->Width ) > sLCD_DIS.LCD_Dis_Column ) {
             Xpoint = Xstart;
