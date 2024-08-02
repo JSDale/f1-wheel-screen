@@ -7,10 +7,12 @@ add_subdirectory(lib/config)
 add_subdirectory(lib/lcd)
 add_subdirectory(lib/font)
 add_subdirectory(examples)
+add_subdirectory(wheel)
 add_subdirectory(lib/fatfs)
 add_subdirectory(lib/sdcard)
 
 include_directories(examples)
+include_directories(wheel)
 include_directories(./lib/config)
 include_directories(./lib/lcd)
 include_directories(./lib/font)
@@ -28,4 +30,4 @@ pico_enable_stdio_uart(main 0)
 # create map/bin/hex/uf2 file etc.
 pico_add_extra_outputs(main)
 
-target_link_libraries(main examples lcd font config pico_stdlib hardware_spi fatfs)
+target_link_libraries(main examples wheel lcd font config pico_stdlib hardware_spi fatfs)
