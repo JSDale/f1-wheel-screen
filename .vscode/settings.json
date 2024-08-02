@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "dev_config.h": "c"
+        "dev_config.h": "c",
+        "mainview.h": "c"
     }
 }

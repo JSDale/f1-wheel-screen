@@ -7,7 +7,8 @@ include_directories(../lib/lcd)
 include_directories(../lib/font)
 include_directories(../lib/fatfs)
 include_directories(../lib/sdcard)
+include_directories(../wheel)
 
 # 生成链接库
 add_library(examples ${DIR_EXAMPLES_SRCS})
-target_link_libraries(examples PUBLIC config lcd font fatfs sdcard)
+target_link_libraries(examples PUBLIC config lcd font fatfs sdcard wheel)
