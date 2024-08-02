@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "dev_config.h": "c",
-        "mainview.h": "c"
+        "mainview.h": "c",
+        "fonts.h": "c"
     }
 }
