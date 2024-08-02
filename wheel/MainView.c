@@ -7,21 +7,9 @@
 #include <stdio.h>
 #include "hardware/watchdog.h"
 #include "pico/stdlib.h"
-#include <stdint.h>
-#include <stdio.h>
 
 uint8_t iterationCount = 0;
 uint8_t numbers[] = {1,2,3,4,5,6,7,8};
-
-void DisplayRandomNumbers(void)
-{
-	uint8_t number = GetNumber();
-
-	POINT xStart = 250;
-    POINT yStart = 50;
-    char content[] = (char)number;
-    GUI_DisString_EN(xStart, yStart, content, &Font24, BLACK, WHITE);
-}
 
 uint8_t GetNumber(void)
 {
@@ -31,6 +19,16 @@ uint8_t GetNumber(void)
 	}
 
 	return numbers[iterationCount];
+}
+
+void DisplayRandomNumbers(void)
+{
+	uint8_t number = GetNumber();
+
+	POINT xStart = 250;
+    POINT yStart = 50;
+    char content[] = (char)number;
+    GUI_DisString_EN(xStart, yStart, content, &Font24, BLACK, WHITE);
 }
 
 int Start(void)
