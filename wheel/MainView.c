@@ -18,14 +18,13 @@ int Start(void)
 	LCD_Init(lcd_scan_dir,800);
 	//TP_Init(lcd_scan_dir);
 
-	GUI_Show();
-	Driver_Delay_ms(1000);
+	//GUI_Show();
+	GUI_Clear();
+	Driver_Delay_ms(200);
     POINT xStart = 5;
     POINT yStart = 5;
     char content[] = "hello world";
-    COLOR purple =  0x680df5;
-    COLOR white = 0xffffff;
-    GUI_DisString_EN(xStart, yStart, content, &Font12, white, purple);
+    GUI_DisString_EN(xStart, yStart, content, &Font12, WHITE, BLUE);
 
 	//LCD_Show_bmp(lcd_scan_dir);
 	//Driver_Delay_ms(2000);
