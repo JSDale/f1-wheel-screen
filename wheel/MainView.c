@@ -9,7 +9,7 @@
 #include "pico/stdlib.h"
 
 uint8_t iterationCount = 0;
-uint8_t numbers[] = {1,2,3,4,5,6,7,8};
+uint8_t numbers[] = {0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38};
 
 uint8_t GetNumber(void)
 {
