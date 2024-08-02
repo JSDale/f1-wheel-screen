@@ -61,4 +61,3 @@ int lcd_test(void)
 
 	return 0;
 }
-

@@ -1,5 +1,10 @@
 ﻿#include "main.h"   //Examples
 
+void setup(void)
+{
+    
+}
+
 int main(void)
 {
     while(1) {
@@ -7,3 +12,4 @@ int main(void)
     }
     return 0;
 }
+
