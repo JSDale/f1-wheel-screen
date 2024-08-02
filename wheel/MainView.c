@@ -27,8 +27,8 @@ void DisplayRandomNumbers(void)
 
 	POINT xStart = 250;
     POINT yStart = 50;
-    char content[] = {(char)number};
-    GUI_DisString_EN(xStart, yStart, content, &Font24, BLACK, WHITE);
+    char numbers[] = {(char)number};
+    GUI_DisString_EN(xStart, yStart, numbers, &Font24, BLACK, WHITE);
 }
 
 int Start(void)
