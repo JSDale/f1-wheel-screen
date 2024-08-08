@@ -30,11 +30,13 @@ void DisplayRandomNumbers(void)
 {
 	uint8_t number = GetNumber();
 
-	POINT xStart = MaxHeight / 2;
-    POINT yStart = MaxWidth / 2;
+	//POINT xStart = MaxHeight / 2;
+	POINT xStart = 120;
+    //POINT yStart = MaxWidth / 2;
+    POINT yStart = 20;
 	char wibble = (char)number;
     char numbers[] = {wibble, '\0'};
-    GUI_DisString_EN(xStart, yStart, numbers, &Font24, BLACK, WHITE);
+    GUI_DisString_EN(xStart, yStart, numbers, &Geist, BLACK, WHITE);
 }
 
 int Start(void)
