@@ -29,6 +29,9 @@ uint8_t GetNumber(void)
 void DisplayRandomNumbers(void)
 {
 	uint8_t number = GetNumber();
+
+	POINT xStart = MaxHeight / 2;
+    POINT yStart = MaxWidth / 2;
 	char wibble = (char)number;
     char numbers[] = {wibble, '\0'};
     GUI_DisString_EN(xStart, yStart, numbers, &Font24, BLACK, WHITE);
