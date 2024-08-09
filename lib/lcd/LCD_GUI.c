@@ -265,13 +265,18 @@ void GUI_DisChar(POINT Xpoint, POINT Ypoint, const char Acsii_Char,
         for(Column = 0; Column < Font->Width; Column ++ ) {
 
             //To determine whether the font background color and screen background color is consistent
-            if(FONT_BACKGROUND == Color_Background) { //this process is to speed up the scan
-                if(*ptr & (0x80 >> (Column % 8)))
+            if(FONT_BACKGROUND == Color_Background) 
+            { //this process is to speed up the scan
+                if(*ptr & (0x80 >> (Column % 8))) GUI_DrawPoint(Xpoint + Column, Ypoint + Page, Color_Foreground, DOT_PIXEL_DFT, DOT_STYLE_DFT);
+            } 
+            else
+            {
+                if(*ptr & (0x80 >> (Column % 8))) 
+                {
                     GUI_DrawPoint(Xpoint + Column, Ypoint + Page, Color_Foreground, DOT_PIXEL_DFT, DOT_STYLE_DFT);
-            } else {
-                if(*ptr & (0x80 >> (Column % 8))) {
-                    GUI_DrawPoint(Xpoint + Column, Ypoint + Page, Color_Foreground, DOT_PIXEL_DFT, DOT_STYLE_DFT);
-                } else {
+                } 
+                else 
+                {
                     GUI_DrawPoint(Xpoint + Column, Ypoint + Page, Color_Background, DOT_PIXEL_DFT, DOT_STYLE_DFT);
                 }
             }
