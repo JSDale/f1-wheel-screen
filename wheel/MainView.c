@@ -54,7 +54,7 @@ int Start(void)
     yStart = MaxHeight / 2;
 	char wibble = '!';
     char numbers[] = {wibble, '\0'};
-    GUI_DisString_EN(xStart, yStart, numbers, &GeistFont36, BLACK, WHITE);
+    GUI_DisString_EN(xStart, yStart, numbers, &GeistFont72, BLACK, WHITE);
 
 	while(1)
 	{
