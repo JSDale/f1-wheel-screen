@@ -52,7 +52,7 @@ int Start(void)
 
 	xStart = MaxWidth / 2;
     yStart = MaxHeight / 2;
-	char wibble = '!';
+	char wibble = ' ';
     char numbers[] = {wibble, '\0'};
     GUI_DisString_EN(xStart, yStart, numbers, &GeistFont36, BLACK, WHITE);
 
