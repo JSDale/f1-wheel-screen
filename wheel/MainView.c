@@ -50,9 +50,15 @@ int Start(void)
     char content[] = "hello world";
     GUI_DisString_EN(xStart, yStart, content, &Font12, BLACK, BLUE);
 
+	xStart = MaxHeight / 2;
+    yStart = MaxWidth / 2;
+	char wibble = '0';
+    char numbers[] = {wibble, '\0'};
+    GUI_DisString_EN(xStart, yStart, numbers, &GeistFont36, BLACK, WHITE);
+
 	while(1)
 	{
-		DisplayRandomNumbers();
+		//DisplayRandomNumbers();
 		Driver_Delay_ms(750);
 	}
 
