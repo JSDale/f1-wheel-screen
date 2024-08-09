@@ -82,6 +82,6 @@ const uint8_t GeistFont36_table [] =
 
 sFONT GeistFont36 = {
   GeistFont36_table,
-  26, /* Width */
+  29, /* Width */
   36, /* Height */
 };
