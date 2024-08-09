@@ -34,7 +34,7 @@ void DisplayRandomNumbers(void)
     POINT yStart = MaxWidth / 2;
 	char wibble = (char)number;
     char numbers[] = {wibble, '\0'};
-    GUI_DisString_EN(xStart, yStart, numbers, &Font24, BLACK, WHITE);
+    GUI_DisString_EN(xStart, yStart, numbers, &GeistFont36, BLACK, WHITE);
 }
 
 int Start(void)
