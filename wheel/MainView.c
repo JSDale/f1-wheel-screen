@@ -50,8 +50,8 @@ int Start(void)
     char content[] = "hello world";
     GUI_DisString_EN(xStart, yStart, content, &Font12, BLACK, BLUE);
 
-	xStart = MaxHeight / 2;
-    yStart = MaxWidth / 2;
+	xStart = MaxWidth / 2;
+    yStart = MaxHeight / 2;
 	char wibble = '!';
     char numbers[] = {wibble, '\0'};
     GUI_DisString_EN(xStart, yStart, numbers, &GeistFont36, BLACK, WHITE);
